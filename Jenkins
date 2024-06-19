@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Hello World from docker container'
                 sh '''
-                ls -ltr
+                ls -ltra
                 npm cache clean --force
                 npm install
                 npm run build
