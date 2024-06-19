@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'Hello World from docker container'
                 sh '''
+                su root
                 ls -ltra /
                 npm config set cache /tmp
                 
