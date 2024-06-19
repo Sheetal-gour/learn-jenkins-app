@@ -13,6 +13,7 @@ pipeline {
                 echo 'Hello World from docker container'
                 sh '''
                 ls -ltr
+                npm install
                 npm run build
                 '''
             }
