@@ -11,9 +11,10 @@ pipeline {
                 npm ci
                 npm install
                 npm run build
-                npm test
                 '''
             }
         }
-    }
+       stage('Test) {
+               npm test
+        }
 }
