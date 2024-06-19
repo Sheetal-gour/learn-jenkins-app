@@ -13,8 +13,8 @@ pipeline {
                 echo 'Hello World from docker container'
                 sh '''
                 ls -ltra /
-                sudo mkdir /.npm
-                chown -R 131:140 "/.npm"
+                npm config set cache .npm
+                
                 ls -ltra
                 npm cache clean --force
                 npm ci
