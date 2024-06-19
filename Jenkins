@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Hello World from docker container'
                 sh '''
-                chown -R 131:140 "/.npm"
+                chown -R 131:140 ".npm"
                 ls -ltra
                 npm cache clean --force
                 npm ci
