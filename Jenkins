@@ -10,6 +10,7 @@ pipeline {
                 }
             }
             steps {
+                cleanWs();
                 echo 'Hello World from docker container'
                 sh '''
                 ls -ltr
