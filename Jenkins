@@ -16,7 +16,6 @@ pipeline {
 
                 ls -ltr
                 whoami
-                chown -R 131:140 "/.npm"
                 npm cache clean --force
                 npm install --loglevel=verbose
                 npm run build
