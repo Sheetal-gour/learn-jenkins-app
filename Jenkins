@@ -2,9 +2,6 @@ pipeline {
     agent any
 
     stages {
-         stage('Cleanup') {\
-                cleanWs();         
-         }
          stage('Build') {
             agent {
                 docker {
