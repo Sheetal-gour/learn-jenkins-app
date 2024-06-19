@@ -13,7 +13,7 @@ pipeline {
                 echo 'Hello World from docker container'
                 sh '''
                 ls -ltra /
-                npm config set cache .npm
+                npm config set cache /tmp
                 
                 ls -ltra
                 npm cache clean --force
