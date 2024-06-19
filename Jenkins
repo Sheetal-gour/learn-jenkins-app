@@ -2,6 +2,9 @@ pipeline {
     agent any
 
     stages {
+         stage('Cleanup') {\
+                cleanWs();         
+         }
          stage('Build') {
             agent {
                 docker {
@@ -10,7 +13,7 @@ pipeline {
                 }
             }
             steps {
-                cleanWs();
+
                 echo 'Hello World from docker container'
                 sh '''
                 ls -ltr
