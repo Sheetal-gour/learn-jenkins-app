@@ -14,7 +14,7 @@ pipeline {
                 echo 'Hello World from docker container'
                 sh '''
                 ls -ltr
-                
+                npm cache clean --force
                 npm install --loglevel=verbose
                 npm run build
                 '''
