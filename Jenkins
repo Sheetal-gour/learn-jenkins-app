@@ -10,14 +10,11 @@ pipeline {
                 }
             }
             steps {
-
                 echo 'Hello World from docker container'
                 sh '''
-
                 ls -ltr
-                whoami
                 npm cache clean --force
-                npm install --loglevel=verbose
+                npm install
                 npm run build
                 '''
             }
