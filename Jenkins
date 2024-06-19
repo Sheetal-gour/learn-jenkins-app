@@ -3,19 +3,9 @@ pipeline {
 
     stages {
          stage('Build') {
-            agent {
-                docker {
-                    image 'node:22-alpine'
-                    reuseNode true
-                }
-            }
             steps {
                 echo 'Hello World from docker container'
-                sh '''
-                su 131
-                ls -ltra /
-                npm config set cache /tmp
-                
+                sh '''                
                 ls -ltra
                 npm cache clean --force
                 npm ci
