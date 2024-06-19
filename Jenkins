@@ -13,7 +13,9 @@ pipeline {
 
                 echo 'Hello World from docker container'
                 sh '''
+
                 ls -ltr
+                sudo chown -R 131:140 "/.npm"
                 npm cache clean --force
                 npm install --loglevel=verbose
                 npm run build
