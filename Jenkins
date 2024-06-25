@@ -28,7 +28,7 @@ pipeline {
             '''
         }
         post {
-          Junit 'test-results/junit.xml'
+          junit 'test-results/junit.xml'
         }
 }
 }
