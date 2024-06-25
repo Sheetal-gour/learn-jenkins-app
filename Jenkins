@@ -5,6 +5,8 @@ pipeline {
 
          stage('Build') {
             steps {
+
+                // Build stage
                 echo 'Hello World from docker container'
                 sh '''                
                 ls -ltra
@@ -16,6 +18,9 @@ pipeline {
             }
         }
        stage('Test') {
+/* 
+Block comment Test stage
+*/
             agent {
               docker {
                  image 'node:18-alpine'
