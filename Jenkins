@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
          stage('Build') {
             steps {
                 echo 'Hello World from docker container'
@@ -20,12 +21,15 @@ pipeline {
                  image 'node:18-alpine'
                   reuseNode true
               }
-}
-              steps{
+             }
+            steps{
                sh '''
                 npm test
             '''
         }
+        post {
+          Junit 'test-results/junit.xml'
         }
+}
 }
 }
